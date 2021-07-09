@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(39, 107, 109);
+    color: rgb(108, 213, 238);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14;
+}
+.bgco{
+    background-color: rgb(58, 12, 137);
+    color: rgb(103, 103, 243);
+}
+img{
+margin: 0%;
+padding: 0;
+display: block;
+}
+h1 , h3 {
+    text-align: center;
+}
+h1.sty{
+background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7dO-EYUdHROKsdSxlHeHOQHaDF%26pid%3DApi&f=1");
+color:green;
+letter-spacing: 7;
+text-align: center;
+text-decoration: underline;
+}
+table{
+    border: skyblue;
+}
+.abc{
+    align-content: center;
+    font-size: 14;
+}
+p.styl{
+color:magenta;
+font-family:"Algerian";
+font-size: medium;
+font-style: italic;
+font-weight: lighter;
+}
