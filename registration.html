@@ -1,1 +1,100 @@
-<DOCTYPE! HTML>
+<!DOCTYPE HTML>
+<html> 
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link href="burton.css" rel="stylesheet">
+</head>
+
+<body id="sti">
+    <table class="tp">
+        <tr>
+            <th><a href="index.html">Home</a></th>
+            <th><a href="plans.html">Holiday Plans</a></th>
+            <th><a href="services.html">Services</a></th>
+            <th><a href="about.html">About us</a></th>
+            <th><a href="registration.html">Registration</a></th>
+        </tr>
+    </table>
+    <hr>
+    <h1>Burton Travels</h1>
+    <br>
+    <form method="GET" name="registration">
+        <h1>Subscription for plans:</h1>
+        <table>
+            <tr>
+                <td><label>Name<span>*</span></label></td>
+                <td><input type="text" size=15 required></td>
+            </tr>
+            <tr>
+                <td><label>Age<span>*</span></label></td>
+                <td><input type="number" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender<span>*</span></label></td>
+                <td><input type="radio" name="Gender" value="Male" required checked>Male
+                    <input type="radio" name="Gender" value="Female">Female
+                    <input type="radio" name="Gender" value="Other">Other
+                </td>
+            </tr>
+            <tr>
+                <td><Label>Date of Birth<span>*</span></Label></td>
+                <td><input type="date" required></td>
+            </tr>
+            <tr>
+                <td><label>Address<span>*</span></label></td>
+                <td><textarea rows=5 cols=25 required></textarea></td>
+            </tr>
+            <tr>
+                <td><label>Phone Number<span>*</span></label></td>
+                <td><input type="tel" required></td>
+            </tr>
+            <tr>
+                <td><label>Email Address</label></td>
+                <td><input type="email" size=16></td>
+            </tr>
+            <tr>
+                <td><label>Select your plan<span>*</span></label></td>
+                <td><select name="plans" size=1 required>
+                        <option>Choose a plan</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Rome">Rome</option>
+                        <option value="London">London</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Paris">Paris</option>
+                        <option value="New Zealand">New Zealand</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label>Choose the services you would like to enjoy:</label><br></td>
+                <td><input type="checkbox" name="services" value="Meal">Meals<br>
+                    <input type="checkbox" name="services" value="Residence">Residence<br>
+                    <input type="checkbox" name="services" value="Transport">Transport<br>
+                    <input type="checkbox" name="services" value="Guide">Tour Guide
+                </td>
+            </tr>
+            <tr>
+                <td><label>Payment Options<span>*</span></label></td>
+                <td><input type="radio" name="pay" value="Cash" required>Cash
+                    <input type="radio" name="pay" value="Debit Card">Debit Card
+                    <input type="radio" name="pay" value="Credit Card">Credit Card
+                </td>
+            </tr>
+            <tr>
+                <td><button type="reset" onclick="alert('The data is erased.')">Clear</button>
+                </td>
+                <td><button type="submit" onclick="alert('The data is sent.')">Send</button></td>
+            </tr>
+
+
+
+
+        </table>
+    </form>
+
+
+</body>
+
+</html>
