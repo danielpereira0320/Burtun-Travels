@@ -34,7 +34,7 @@ table{
     background-color: goldenrod;
     color:rgb(31, 92, 19);
     font-family: 'Times New Roman', Times, serif;
-    font-size-adjust: 14;
+    font-size-adjust: 16;
 }
 p.styl{
 color:magenta;
@@ -48,8 +48,8 @@ span{
 }
 table.tp{
     width:100%; height: 3px; 
-    background-color: rgb(58, 12, 137);
-    color: rgb(103, 103, 243);
+    background-color: rgb(99, 184, 206);
+    color: rgb(2, 14, 27);
     text-align:center;
     border-spacing:"10";
     border-radius: 1;
