@@ -1,5 +1,6 @@
 <Doctype! html>
-<html>
+    <html>
+
     <head>
         <title>Calculator</title>
         <link href="burton.css" rel="stylesheet">
@@ -9,14 +10,15 @@
             }
         </style>
     </head>
+
     <body>
         <div>
             <form method="POST" id="calc">
                 <label>1st Number</label>
-                <input type="text" name="1n" id="1n" pattern="[0-9]{1,3}" title="Enter first number"> 
+                <input type="text" name="1n" id="1n" pattern="[0-9]{1,3}" title="Enter first number">
                 <label>2nd Number</label>
-                <input type="text" name="2n" id="2n" pattern="[0-9]{1,3}" title="Enter second number"> 
-                <input type="button" Value="ADD" onclick="add(); ">                
+                <input type="text" name="2n" id="2n" pattern="[0-9]{1,3}" title="Enter second number">
+                <input type="button" Value="ADD" onclick="add(); ">
             </form>
             <script>
                 let num1 = parseInt(document.getElementById("1n"));
@@ -25,13 +27,13 @@
                 let sum = 0;
 
                 function add() {
-                    
-                        sum = num1 + num2;
-                        alert("The sum of the two numbers is "+sum);
-                    }
+
+                    sum = num1 + num2;
+                    alert("The sum of the two numbers is " + sum);
+                }
 
 
-                
+
 
 
             </script>
@@ -42,4 +44,4 @@
 
 
 
-</html>
+    </html>
