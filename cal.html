@@ -15,19 +15,19 @@
         <div>
             <form method="POST" id="calc">
                 <label>1st Number</label>
-                <input type="text" name="1n" id="1n" pattern="[0-9]{1,3}" title="Enter first number">
+                <input type="number" name="1n" id="1n" pattern="[0-9]{1,3}" title="Enter first number">
                 <label>2nd Number</label>
-                <input type="text" name="2n" id="2n" pattern="[0-9]{1,3}" title="Enter second number">
+                <input type="number" name="2n" id="2n" pattern="[0-9]{1,3}" title="Enter second number">
                 <input type="button" Value="ADD" onclick="add(); ">
             </form>
             <script>
-                let num1 = parseInt(document.getElementById("1n"));
-                let num2 = parseInt(document.getElementById("2n"));
-                var patt = /^[0-9]{1,3}$/i;
-                let sum = 0;
+                
 
                 function add() {
-
+                    var num1 = parseInt(document.getElementById("1n").value);
+                    var num2 = parseInt(document.getElementById("2n").value);
+                    var patt = /^[0-9]{1,3}$/i;
+                    var sum = 0;
                     sum = num1 + num2;
                     alert("The sum of the two numbers is " + sum);
                 }
