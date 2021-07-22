@@ -1,86 +1,87 @@
 <Doctype! html>
-<html>
+    <html>
     <head>
         <title>Coffee</title>
         <style>
-            input:focus{background-color:antiquewhite}
-            body{
-                background-color:khaki;
-                color:darkgoldenrod;
+            input:focus {
+                background-color: antiquewhite
+            }
+            body {
+                background-color: khaki;
+                color: darkgoldenrod;
                 font-size: larger;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-                letter-spacing:normal;
+                letter-spacing: normal;
                 font-weight: 300;
             }
-            h1 , label{
+
+            h1,
+            label {
                 font-weight: 700;
             }
-            option , select , input{
-                background-color:blanchedalmond;
-                color:coral;
+            option,
+            select,
+            input {
+                background-color: blanchedalmond;
+                color: coral;
                 font-size: large;
                 font-weight: 500;
-                font-family: Georgia, 'Times New Roman', Times, serif;                
+                font-family: Georgia, 'Times New Roman', Times, serif;
             }
             img {
                 size: 20;
             }
         </style>
         <script>
-            function cal_coffee(){
+            function cal_coffee() {
 
                 var Num_cup = parseInt(document.getElementById("num").value);
                 var rate = parseInt(document.getElementById("tn").value);
                 var size;
-               
-                if(document.getElementById('s1').checked){
+
+                if (document.getElementById('s1').checked) {
                     size = 0.64;
                 }
-                else if(document.getElementById('s2').checked){
+                else if (document.getElementById('s2').checked) {
                     size = 1;
                 }
-                else{
+                else {
                     size = 1.41;
                 }
-                if(Num_cup > 0){
+                if (Num_cup > 0) {
                     var cost = rate * Num_cup * size;
-                    cost = cost + cost * 12/100;
-                    alert("Cost of coffee is Rs."+cost+". Thank you for visiting.");
+                    cost = cost + cost * 12 / 100;
+                    alert("Cost of coffee is Rs." + cost + ". Thank you for visiting.");
                 }
-                else{
+                else {
                     alert("Enter an appropriate number of cups.")
                 }
-
             }
-
         </script>
     </head>
     <body>
         <form>
             <h1>Netcafe Coffee</h1><br>
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.XOmNk_CuKZ1NGt213oWSTgHaEK%26pid%3DApi&f=1" alt="coffee_img">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.XOmNk_CuKZ1NGt213oWSTgHaEK%26pid%3DApi&f=1"
+                alt="coffee_img">
             <br><br>
-            <label >Choose your Type of Coffee</label><br>
+            <label>Choose your Type of Coffee</label><br>
             <select required id="tn">
-                <option value="9.68" >Regular-Rs.9.68/M</option>
-                <option value="18.73" >Espresso-Rs.18.73/M</option>
-                <option value="14.65" >Hot Chocolate-Rs.14.65/M</option>
-                <option value="23.65" >Cold Coffee-Rs.23.65/M</option>
-                <option value="28.54" >Chocolate Shake-Rs.28.54/M</option>
-                <option value="42.98" >Irish Cream-Rs.42.98/M</option>
+                <option value="9.68">Regular-Rs.9.68/M</option>
+                <option value="18.73">Espresso-Rs.18.73/M</option>
+                <option value="14.65">Hot Chocolate-Rs.14.65/M</option>
+                <option value="23.65">Cold Coffee-Rs.23.65/M</option>
+                <option value="28.54">Chocolate Shake-Rs.28.54/M</option>
+                <option value="42.98">Irish Cream-Rs.42.98/M</option>
             </select><br><br>
-            <label >Size of Cup</label><br>
+            <label>Size of Cup</label><br>
             <input type="radio" name="size" id="s1" required>Small<br>
             <input type="radio" name="size" id="s2">Medium<br>
             <input type="radio" name="size" id="s3">Large<br><br>
-            <label >Number of cups</label><br>
-            <input type="number" name="num" id="num" ><br><br>
-            <input type="button" name="sub" value="BUY" onclick="cal_coffee(); ">
-
-
-
+            <label>Number of cups</label><br>
+            <input type="number" name="num" id="num"><br><br>
+            <input type="submit" name="sub" value="BUY" onclick="cal_coffee(); ">
+            
         </form>
-
-
     </body>
-</html>
+    </html>
