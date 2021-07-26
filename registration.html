@@ -106,44 +106,44 @@
         <h1>Subscription for plans:</h1>
         <table>
             <tr>
-                <td><Label>Name<span>*</span></Label></td>
-                <td><input type="text" id="in_text" required></td>
+                <td><Label for="name" >Name<span>*</span></Label></td>
+                <td><input name="name" type="text" id="in_text" required></td>
                 <span id="msg" style="color: red;"></span>
             </tr>
             <tr>
-                <td><Label>Age<span>*</span></Label></td>
-                <td><input type="text" id="in_age" required></td>
+                <td><Label for="age">Age<span>*</span></Label></td>
+                <td><input name="age" type="text" id="in_age" required></td>
                 <span id="msg" style="color: red;"></span>
             </tr>
             <tr>
-                <td><Label>Gender<span>*</span></Label></td>
+                <td><Label for="Gender">Gender<span>*</span></Label></td>
                 <td><input type="radio" name="Gender" value="Male" required checked>Male
                     <input type="radio" name="Gender" value="Female">Female
                     <input type="radio" name="Gender" value="Other">Other
                 </td>
             </tr>
             <tr>
-                <td><Label>Date of Birth<span>*</span></Label></td>
-                <td><input type="date" required></td>
+                <td><Label for="date">Date of Birth<span>*</span></Label></td>
+                <td><input name="date" type="date" required></td>
             </tr>
             <tr>
-                <td><Label>Address<span>*</span></abel>
+                <td><Label for="addr">Address<span>*</span></abel>
                 </td>
-                <td><textarea rows=5 cols=25 id="in_addr" required></textarea></td>
+                <td><textarea name="addr" rows=5 cols=25 id="in_addr" required></textarea></td>
                 <span id="msg" style="color: red;"></span>
             </tr>
             <tr>
-                <td><Label>Phone Number<span>*</span></Label></td>
-                <td><input type="tel" id="in_tel" required></td>
+                <td><Label for="numb">Phone Number<span>*</span></Label></td>
+                <td><input type="tel" name="numb" id="in_tel" required></td>
                 <span id="msg" style="color: red;"></span>
             </tr>
             <tr>
-                <td><Label>Email Address</Label></td>
-                <td><input type="email" id="in_email"></td>
+                <td><Label for="email">Email Address</Label></td>
+                <td><input type="email" name="email" id="in_email"></td>
                 <span id="msg" style="color: red;"></span>
             </tr>
             <tr>
-                <td><Label>Select your plan<span>*</span></Label></td>
+                <td><Label for="plans">Select your plan<span>*</span></Label></td>
                 <td><select name="plans" required>
                         <option>Choose a plan</option>
                         <option value="Iceland">Iceland</option>
@@ -156,7 +156,7 @@
                     </select></td>
             </tr>
             <tr>
-                <td><Label>Choose the services you would like to enjoy:</Label><br></td>
+                <td><Label for="services">Choose the services you would like to enjoy:</Label><br></td>
                 <td><input type="checkbox" name="services" value="Meal">Meals<br>
                     <input type="checkbox" name="services" value="Stay">Stay<br>
                     <input type="checkbox" name="services" value="Transport">Transport<br>
@@ -164,7 +164,7 @@
                 </td>
             </tr>
             <tr>
-                <td><Label>Payment Options<span>*</span></Label></td>
+                <td><Label for="pay">Payment Options<span>*</span></Label></td>
                 <td><input type="radio" name="pay" value="Cash" required>Cash
                     <input type="radio" name="pay" value="Online Payment">Online Payment
                     <input type="radio" name="pay" value="Credit Payment">Credit Payment
