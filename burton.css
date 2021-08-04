@@ -1,12 +1,12 @@
 body{
-    background-color: rgb(39, 107, 109);
-    color: rgb(108, 213, 238);
+    background-color: rgb(157, 202, 204);
+    color: rgb(14, 67, 80);
     font-family: 'Times New Roman', Times, serif;
     font-size: 14;
 }
 .bgco{
-    background-color: rgb(58, 12, 137);
-    color: rgb(103, 103, 243);
+    background-color: rgb(185, 161, 228);
+    color: rgb(11, 11, 71);
 }
 img{
 margin: 0%;
@@ -37,7 +37,7 @@ table{
     font-size-adjust: 16;
 }
 p.styl{
-color:magenta;
+color:rgb(187, 39, 187);
 font-family:"Algerian";
 font-size: medium;
 font-style: italic;
