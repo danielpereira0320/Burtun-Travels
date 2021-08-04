@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
@@ -10,6 +11,7 @@
         }
     </style>
 </head>
+
 <body id="sti">
     <script>
         function getFocus() {
@@ -90,94 +92,96 @@
         }
     </script>
     <hr>
-    
-        
-            <a href="index.html">Home</a>
-            <a href="plans.html">Holiday Plans</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About us</a>
-            <a href="registration.html">Registration</a>
-        
-    
+
+
+    <a href="index.html">Home</a>
+    <a href="plans.html">Holiday Plans</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About us</a>
+    <a href="registration.html">Registration</a>
+
+
     <hr>
     <h1>Burton Travels</h1>
     <br>
     <form id="myform" method="Post" name="registration">
         <h1>Subscription for plans:</h1>
-            <fieldset name="personal_details">
-                <Label for="in_text" >Name<span>*</span></Label><br>
-                <input name="name" type="text" id="in_text" required>
-                <span id="msg" style="color: red;"></span><br><br>
-            
-            
-                <Label for="in_age">Age<span>*</span></Label><br>
-                <input name="age" type="text" id="in_age" required>
-                <span id="msg" style="color: red;"></span><br><br>
-            
-            
-                <Label for="gender">Gender<span>*</span></Label><br>
-                <input type="radio" name="Gender" value="Male" required checked>Male<br>
-                    <input type="radio" name="Gender" class="gender" value="Female">Female<br>
-                    <input type="radio" name="Gender" class="gender" value="Other">Other<br><br>
-                
-            
-            
-                <Label for="date">Date of Birth<span>*</span></Label><br>
-                <input name="date" type="date" required><br><br>
-            
-            
-                <Label for="in_addr">Address<span>*</span></abel><br>
-                
+        <fieldset>
+            <legend>Personal Details:</legend>
+            <Label for="in_text">Name<span>*</span></Label><br>
+            <input name="name" type="text" id="in_text" required>
+            <span id="msg" style="color: red;"></span><br><br>
+
+
+            <Label for="in_age">Age<span>*</span></Label><br>
+            <input name="age" type="text" id="in_age" required>
+            <span id="msg" style="color: red;"></span><br><br>
+
+
+            <Label for="gender">Gender<span>*</span></Label><br>
+            <input type="radio" name="Gender" value="Male" required checked>Male<br>
+            <input type="radio" name="Gender" class="gender" value="Female">Female<br>
+            <input type="radio" name="Gender" class="gender" value="Other">Other<br><br>
+
+
+
+            <Label for="date">Date of Birth<span>*</span></Label><br>
+            <input name="date" type="date" required><br><br>
+
+
+            <Label for="in_addr">Address<span>*</span></abel><br>
+
                 <textarea name="addr" rows=5 cols=25 id="in_addr" required></textarea>
                 <span id="msg" style="color: red;"></span><br><br>
-            
-            
+
+
                 <Label for="in_tel">Phone Number<span>*</span></Label><br>
                 <input type="tel" name="numb" id="in_tel" required>
                 <span id="msg" style="color: red;"></span><br><br>
-            
-            
+
+
                 <Label for="in_email">Email Address</Label><br>
                 <input type="email" name="email" id="in_email">
                 <span id="msg" style="color: red;"></span><br>
-                </fieldset><br>
-                <fieldset name="plan">
-            
-                <Label for="plans">Select your plan<span>*</span></Label><br>
-                <select name="plans" id="plans" required>
-                        <option>Choose a plan</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Rome">Rome</option>
-                        <option value="London">London</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Paris">Paris</option>
-                        <option value="New Zealand">New Zealand</option>
-                    </select><br><br>
-            
-            
-                <Label for="services">Choose the services you would like to enjoy:</Label><br>
-                <input type="checkbox" name="services" class="services" value="Meal">Meals<br>
-                <input type="checkbox" name="services" class="services" value="Stay">Stay<br>
-                <input type="checkbox" name="services" class="services" value="Transport">Transport<br>
-                <input type="checkbox" name="services" class="services" value="Guide">Tour Guide<br><br>
-                
-            
-            
-                <Label for="pay">Payment Options<span>*</span></Label><br>
-                <input type="radio" name="pay" class="pay" value="Cash" required>Cash<br>
-                <input type="radio" name="pay" class="pay" value="Online Payment">Online Payment<br>
-                <input type="radio" name="pay" class="pay" value="Credit Payment">Credit Payment<br>
-            </fieldset><br>
-            
-            
-                <button type="reset" onclick="alert('The data is erased.')">Clear</button>
-                
-                
-                <input type="submit" value="Send" onclick="Verification(); ">
-           
-            
-        
+        </fieldset><br>
+        <fieldset>
+            <legend>Plan Details:</legend>
+
+            <Label for="plans">Select your plan<span>*</span></Label><br>
+            <select name="plans" id="plans" required>
+                <option>Choose a plan</option>
+                <option value="Iceland">Iceland</option>
+                <option value="Japan">Japan</option>
+                <option value="Rome">Rome</option>
+                <option value="London">London</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Paris">Paris</option>
+                <option value="New Zealand">New Zealand</option>
+            </select><br><br>
+
+
+            <Label for="services">Choose the services you would like to enjoy:</Label><br>
+            <input type="checkbox" name="services" class="services" value="Meal">Meals<br>
+            <input type="checkbox" name="services" class="services" value="Stay">Stay<br>
+            <input type="checkbox" name="services" class="services" value="Transport">Transport<br>
+            <input type="checkbox" name="services" class="services" value="Guide">Tour Guide<br><br>
+
+
+
+            <Label for="pay">Payment Options<span>*</span></Label><br>
+            <input type="radio" name="pay" class="pay" value="Cash" required>Cash<br>
+            <input type="radio" name="pay" class="pay" value="Online Payment">Online Payment<br>
+            <input type="radio" name="pay" class="pay" value="Credit Payment">Credit Payment<br>
+        </fieldset><br>
+
+
+        <button type="reset" onclick="alert('The data is erased.')">Clear</button>
+
+
+        <input type="submit" value="Send" onclick="Verification(); ">
+
+
+
     </form>
 </body>
 
