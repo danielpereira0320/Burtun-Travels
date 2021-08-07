@@ -3,17 +3,20 @@
 
 <head>
     <style>
-        body{
+        body {
             background-color: rgb(127, 199, 199);
             color: rgb(12, 12, 110);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        h1,h2{
+
+        h1,
+        h2 {
             color: rgb(59, 14, 100);
             font-family: sans-serif;
             font-weight: 100;
         }
-        span{
+
+        span {
             font-style: italic;
         }
     </style>
@@ -25,40 +28,40 @@
             var mins = d.getMinutes();
             var sec = d.getSeconds();
             var mnth = d.getMonth();
-            if ((dt < 5) & (mnth < 8)){
-                var ad_dt = 5 - dt;
-                var ad_hr = 24 - hrs;
-                var ad_min = 60 - mins;
-                var ad_sec = 60 - sec;
+            if ((dt < 5) & (mnth < 8)) {
+                var ad_dt = 4 - dt;
+                var ad_hr = 23 - hrs;
+                var ad_min = 59 - mins;
+                var ad_sec = 59 - sec;
                 document.getElementById('adm_id').innerHTML = ad_dt + ":" + ad_hr + ":" + ad_min + ":" + ad_sec;
             }
             else {
                 document.getElementById('adm_id').innerHTML = "The time for submitting the form is over.";
             }
-            if ((dt < 10) & (mnth < 8)){
-                    var en_dt = 10 - dt;
-                    var en_hr = 24 - hrs;
-                    var en_min = 60 - mins;
-                    var en_sec = 60 - sec;
-                    document.getElementById('ent_id').innerHTML = en_dt + ":" + en_hr + ":" + en_min + ":" + en_sec;
-                }
+            if ((dt < 10) & (mnth < 8)) {
+                var en_dt = 9 - dt;
+                var en_hr = 23 - hrs;
+                var en_min = 59 - mins;
+                var en_sec = 59 - sec;
+                document.getElementById('ent_id').innerHTML = en_dt + ":" + en_hr + ":" + en_min + ":" + en_sec;
+            }
             else {
-                    document.getElementById('ent_id').innerHTML = "The Entrance exam has commenced";
-                }
+                document.getElementById('ent_id').innerHTML = "The Entrance exam has commenced";
+            }
 
-                if ((dt < 15) & (mnth < 8)){
-                    var in_dt = 15 - dt;
-                    var in_hr = 24 - hrs;
-                    var in_min = 60 - mins;
-                    var in_sec = 60 - sec;
-                    document.getElementById('hos_id').innerHTML = "The flag will be hoisted in " + in_dt + "days " + in_hr + "hrs " + in_min + "mins" + in_sec + "secs.";
-                }
-                else {
+            if ((dt < 15) & (mnth < 8)) {
+                var in_dt = 14 - dt;
+                var in_hr = 23 - hrs;
+                var in_min = 59 - mins;
+                var in_sec = 59 - sec;
+                document.getElementById('hos_id').innerHTML = "The flag will be hoisted in " + in_dt + "days " + in_hr + "hrs " + in_min + "mins" + in_sec + "secs.";
+            }
+            else {
 
-                    document.getElementById('hos_id').innerHTML = "The Flag has been hoisted";
-                }
-                
-            //setTimeout("location.reload(true);",r);
+                document.getElementById('hos_id').innerHTML = "The Flag has been hoisted";
+            }
+
+            setTimeout("location.reload(true);", r);
         }
     </script>
     <title>
@@ -66,7 +69,7 @@
     </title>
 </head>
 
-<body onload = "JavaScript:fetch_time(1000)">
+<body onload="JavaScript:fetch_time(1000)">
     <div>
         <h1>Countdown for Entrance exam and Independence day.</h1>
     </div>
