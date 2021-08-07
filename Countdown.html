@@ -18,17 +18,6 @@
         }
     </style>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('h1.news1').click(function () {
-                $('p.news1').slideToggle("slow");
-            });
-
-            $('h1.news2').click(function () {
-                $('p.news2').slideToggle("slow");
-            });
-        });
-    </script>
-    <script type="text/javascript">
         function fetch_time(r) {
             var d = new Date();
             var dt = d.getDate();
@@ -69,7 +58,7 @@
                     document.getElementById('hos_id').innerHTML = "The Flag has been hoisted";
                 }
                 
-            setTimeout("location.reload(true);",r);
+            //setTimeout("location.reload(true);",r);
         }
     </script>
     <title>
