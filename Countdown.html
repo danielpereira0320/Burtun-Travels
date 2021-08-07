@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            background-color: rgb(127, 199, 199);
+            color: rgb(12, 12, 110);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1,h2{
+            color: rgb(59, 14, 100);
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+        span{
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('h1.news1').click(function () {
+                $('p.news1').slideToggle("slow");
+            });
+
+            $('h1.news2').click(function () {
+                $('p.news2').slideToggle("slow");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function fetch_time(r) {
+            var d = new Date();
+            var dt = d.getDate();
+            var hrs = d.getHours();
+            var mins = d.getMinutes();
+            var sec = d.getSeconds();
+            var mnth = d.getMonth();
+            if ((dt < 5) & (mnth < 8)){
+                var ad_dt = 5 - dt;
+                var ad_hr = 24 - hrs;
+                var ad_min = 60 - mins;
+                var ad_sec = 60 - sec;
+                document.getElementById('adm_id').innerHTML = ad_dt + ":" + ad_hr + ":" + ad_min + ":" + ad_sec;
+            }
+            else {
+                document.getElementById('adm_id').innerHTML = "The time for submitting the form is over.";
+            }
+            if ((dt < 10) & (mnth < 8)){
+                    var en_dt = 10 - dt;
+                    var en_hr = 24 - hrs;
+                    var en_min = 60 - mins;
+                    var en_sec = 60 - sec;
+                    document.getElementById('ent_id').innerHTML = en_dt + ":" + en_hr + ":" + en_min + ":" + en_sec;
+                }
+            else {
+                    document.getElementById('ent_id').innerHTML = "The Entrance exam has commenced";
+                }
+
+                if ((dt < 15) & (mnth < 8)){
+                    var in_dt = 15 - dt;
+                    var in_hr = 24 - hrs;
+                    var in_min = 60 - mins;
+                    var in_sec = 60 - sec;
+                    document.getElementById('hos_id').innerHTML = "The flag will be hoisted in " + in_dt + "days " + in_hr + "hrs " + in_min + "mins" + in_sec + "secs.";
+                }
+                else {
+
+                    document.getElementById('hos_id').innerHTML = "The Flag has been hoisted";
+                }
+                
+            setTimeout("location.reload(true);",r);
+        }
+    </script>
+    <title>
+        Countdown
+    </title>
+</head>
+
+<body onload = "JavaScript:fetch_time(1000)">
+    <div>
+        <h1>Countdown for Entrance exam and Independence day.</h1>
+    </div>
+    <div>
+        <h2>Countdown for Admission</h2><br>
+        Time remaining for Admission: <span id="adm_id"></span><br><br>
+    </div>
+    <div>
+        <h2>Countdown for Entrance Exam</h2><br>
+        Time remaining until Entrance Exam: <span id="ent_id"></script>
+        </span><br><br>
+    </div>
+    <div>
+        <h2>Hoisting of the flag</h2><br>
+        <span id="hos_id"></span>
+    </div>
+</body>
+
+</html>
