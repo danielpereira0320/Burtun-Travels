@@ -1,188 +1,184 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
-    <link href="burton.css" rel="stylesheet">
+    <title>Subscription</title>
+
+    <link rel="stylesheet" href="burton.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        input:focus {
-            background-color: sandybrown;
+        body {
+            background-color: mediumblue;
+            color: aqua;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 200;
+            font-size: 32px;
+            text-shadow: aqua;
+            background-blend-mode: darken;
+        }
+        
+        h3 {
+            font-size: 38px;
+            text-align: left;
+        }
+        
+        h2 {
+            font-size: 42px;
+        }
+        
+        ul {
+            text-align: left;
         }
     </style>
+
 </head>
 
-<body id="sti">
-    <script>
-        function getFocus() {
-            document.getElementById("in_text").focus();
-            document.getElementById("in_age").focus();
-            document.getElementById("in_email").focus();
-            document.getElementById("in_addr").focus();
-            document.getElementById("in_tel").focus();
-        }
-        function Verification() {
-            var pattern1 = /^[a-zA-Z ]{2,25}$/i;
-            var text1 = document.getElementById("in_text");
-            var pattern2 = /^[0-9]{1,3}$/i;
-            var text2 = document.getElementById("in_age");
-            var pattern3 = /^[0-9a-zA-Z@. ]{2,25}$/i;
-            var text3 = document.getElementById("in_email");
-            var pattern4 = /^[0-9a-zA-Z-,./ ]{2,150}$/i;
-            var text4 = document.getElementById("in_addr");
-            var pattern5 = /^[0-9]{4,12}$/i;
-            var text5 = document.getElementById("in_tel");
-            var varz = ""
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <a class="navbar-brand" href="#"> 
+                DAEL Tourism
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Cities
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="mumbai.html">Mumbai</a></li>
+                            <li><a class="dropdown-item" href="pune.html">Pune</a></li>
+                            <li><a class="dropdown-item" href="nashik.html">Nashik</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="registration.html">Subscription</a>
+                    </li>
 
-            console.log(!pattern1.test(text1.value))
-            if (!pattern1.test(text1.value)) {
-                document.getElementById("msg").innerHTML = "Enter a proper name.";
-                alert("Enter Correct Name:")
-                //text.focus();
-                getFocus();
-                //document.getElementById("uname").focus();
-            }
-            else {
-                document.getElementById("myform").action = "sub.html";
-            }
-            if (!pattern2.test(text2.value)) {
-                document.getElementById("msg").innerHTML = "Enter a proper age.";
-                alert("Enter Correct Age:")
-                //text.focus();
-                getFocus();
-                //document.getElementById("uname").focus();
-            }
-            else {
-                document.getElementById("myform").action = "sub.html";
-            }
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light bg-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-            if (!pattern3.test(text3.value)) {
-                document.getElementById("msg").innerHTML = "Enter a proper email.";
-                alert("Enter Correct Email:")
-                //text.focus();
-                getFocus();
-                //document.getElementById("uname").focus();
-            }
-            else {
-                document.getElementById("myform").action = "sub.html";
-            }
+    <br><br>
 
-            if (!pattern4.test(text4.value)) {
-                document.getElementById("msg").innerHTML = "Enter a proper address.";
-                alert("Enter Correct Address:")
-                //text.focus();
-                getFocus();
-                //document.getElementById("uname").focus();
-            }
-            else {
-                document.getElementById("myform").action = "sub.html";
-            }
-
-            if (!pattern5.test(text5.value)) {
-                document.getElementById("msg").innerHTML = "Enter a proper phone number.";
-                alert("Enter Correct Number:")
-                //text.focus();
-                getFocus();
-                //document.getElementById("uname").focus();
-            }
-            else {
-                document.getElementById("myform").action = "sub.html";
-            }
-            alert("Submitted")
-        }
-    </script>
-    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 style="font-size: 50px;"><strong>Subscription Plans</strong></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>We provide information about various tourist places in Mumbai, Pune and Nashik. <strong>Support us by subscribing.</strong></p>
+            </div>
+            <div class="row">
 
 
-    <a href="index.html">Home</a>
-    <a href="plans.html">Holiday Plans</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About us</a>
-    <a href="registration.html">Registration</a>
+                <br>
+                <div class="card-group">
+                    <div class="col-sm-6">
+                        <div class="card bg-primary" style="height: 700px;">
+                            <div class="card-body text-center">
+                                <h2 class="card-header" style="background-color: darkblue; color: cornflowerblue;"><strong>Regular Subscription</strong></h2>
+                                <p class="card-body">
+                                    <h3>Benefits</h3>
+
+                                    <ul>
+                                        <li>
+                                            Regular Notifictions about Updates
+                                        </li>
+                                        <li>
+                                            Better Accessability Options
+                                        </li>
+                                    </ul>
+                                    <h3>Cost</h3>
+                                    <ul>
+                                        <li>
+                                            1 month: Rs.10
+                                        </li>
+                                        <li>
+                                            3 months: Rs.25
+                                        </li>
+                                        <li>
+                                            1 year: Rs.90
+                                        </li>
+                                    </ul>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card bg-primary" style="height: 700px;">
+                            <div class="card-body text-center">
+                                <h2 class="card-header" style="background-color: darkblue; color: cornflowerblue;"><strong>Premium Subscription</strong></h2>
+                                <p class="card-body">
+                                    <h3>Benefits</h3>
+
+                                    <ul>
+                                        <li>
+                                            Benefits of Regular
+                                        </li>
+                                        <li>
+                                            Notifications about Future Plans
+                                        </li>
+                                    </ul>
+                                    <h3>Cost</h3>
+                                    <ul>
+                                        <li>
+                                            1 month: Rs.30
+                                        </li>
+                                        <li>
+                                            3 months: Rs.80
+                                        </li>
+                                        <li>
+                                            1 year: Rs.300
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
 
-    <hr>
-    <h1>Burton Travels</h1>
-    <br>
-    <form id="myform" method="Post" name="registration">
-        <h1>Subscription for plans:</h1>
-        <fieldset>
-            <legend>Personal Details:</legend>
-            <Label for="in_text">Name<span>*</span></Label><br>
-            <input name="name" type="text" id="in_text" required>
-            <span id="msg" style="color: red;"></span><br><br>
+            </div>
+        </div>
 
 
-            <Label for="in_age">Age<span>*</span></Label><br>
-            <input name="age" type="text" id="in_age" required>
-            <span id="msg" style="color: red;"></span><br><br>
+        <br><br>
+        <div class="container-fluid">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="subscription.html" class="btn btn-dark active" style="font-size: 32px;">Click to Subscribe</a>
+            </div>
+        </div>
 
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <span>&copy; DAEL Tourism Org</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-            <Label for="gender">Gender<span>*</span></Label><br>
-            <input type="radio" name="Gender" id="gender" value="Male" required checked>Male<br>
-            <input type="radio" name="Gender" id="gender" value="Female">Female<br>
-            <input type="radio" name="Gender" id="gender" value="Other">Other<br><br>
-
-
-
-            <Label for="date">Date of Birth<span>*</span></Label><br>
-            <input name="date" type="date" id="date" required><br><br>
-
-
-            <Label for="in_addr">Address<span>*</span></abel><br>
-
-                <textarea name="addr" rows=5 cols=25 id="in_addr" required></textarea>
-                <span id="msg" style="color: red;"></span><br><br>
-
-
-                <Label for="numb">Phone Number<span>*</span></Label><br>
-                <input type="tel" name="numb" id="numb" required>
-                <span id="msg" style="color: red;"></span><br><br>
-
-
-                <Label for="in_email">Email Address</Label><br>
-                <input type="email" name="in_email" id="in_email">
-                <span id="msg" style="color: red;"></span><br>
-        </fieldset><br>
-        <fieldset>
-            <legend>Plan Details:</legend>
-
-            <Label for="plans">Select your plan<span>*</span></Label><br>
-            <select name="plans" id="plans" required>
-                <option>Choose a plan</option>
-                <option value="Iceland">Iceland</option>
-                <option value="Japan">Japan</option>
-                <option value="Rome">Rome</option>
-                <option value="London">London</option>
-                <option value="Maldives">Maldives</option>
-                <option value="Paris">Paris</option>
-                <option value="New Zealand">New Zealand</option>
-            </select><br><br>
-
-
-            <Label for="services">Choose the services you would like to enjoy:</Label><br>
-            <input type="checkbox" name="services" id="services" value="Meal">Meals<br>
-            <input type="checkbox" name="services" id="services" value="Stay">Stay<br>
-            <input type="checkbox" name="services" id="services" value="Transport">Transport<br>
-            <input type="checkbox" name="services" id="services" value="Guide">Tour Guide<br><br>
-
-
-
-            <Label for="pay">Payment Options<span>*</span></Label><br>
-            <input type="radio" name="pay" id="pay" value="Cash" required>Cash<br>
-            <input type="radio" name="pay" id="pay" value="Online Payment">Online Payment<br>
-            <input type="radio" name="pay" id="pay" value="Credit Payment">Credit Payment<br>
-        </fieldset><br>
-
-
-        <button type="reset" onclick="alert('The data is erased.')">Clear</button>
-
-
-        <input type="submit" value="Send" onclick="Verification(); ">
-
-
-
-    </form>
 </body>
 
 </html>

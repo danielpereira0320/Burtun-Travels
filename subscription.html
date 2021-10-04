@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription form</title>
+
+    <link rel="stylesheet" href="burton.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $('#sbm').click(function() {
+
+                var plan = $('#sbt').val(); //get the value from the textbox
+                var time = $('[name="period"]:radio:checked').val();
+
+                if (plan == "reg") {
+                    if (time == "1") {
+                        alert("Total payment to be made is Rs.10");
+                    } else if (time == "3") {
+                        alert("Total payment to be made is Rs.25");
+                    } else {
+                        alert("Total payment to be made is Rs.90");
+                    }
+                } else if (plan == "pre") {
+                    if (time == "1") {
+                        alert("Total payment to be made is Rs.30");
+                    } else if (time == "3") {
+                        alert("Total payment to be made is Rs.80");
+                    } else {
+                        alert("Total payment to be made is Rs.300");
+                    }
+                }
+
+            });
+        });
+    </script>
+    <style>
+        body {
+            background-color: mediumblue;
+            color: aqua;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 200;
+            font-size: 32px;
+            text-shadow: aqua;
+            background-blend-mode: darken;
+        }
+        
+        h1 {
+            font-size: 46px;
+            text-emphasis: inherit;
+            text-transform: uppercase;
+            text-decoration: solid;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        
+        h3 {
+            font-size: 38px;
+            text-align: left;
+        }
+        
+        h2 {
+            font-size: 42px;
+        }
+        
+        ul {
+            text-align: left;
+        }
+        
+        legend {
+            font-size: 42px;
+            text-emphasis: inherit;
+            text-decoration: underline;
+            color: aquamarine;
+        }
+        
+        fieldset {
+            outline-width: 1px;
+            border-radius: 1px;
+            border-color: aquamarine;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form method="POST" action="">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Subscription for Dael Tourism</h1><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <fieldset>
+                        <legend>Personal Details</legend><br>
+                </div>
+
+                <div class="col-sm-3">
+                    <label for="sbnm">Name: </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" name="sbnm" id="sbnm"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="sbag">Age: </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" name="sbnm" id="sbnm"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="sbem">Email Id: </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="email" name="sbem" id="sbem"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="sbph">Phone Number: </label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" name="sbph" id="sbph">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Plans</legend>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="sbt">Plan</label>
+                </div>
+                <div class="col-sm-3">
+                    <select name="sbt" id="sbt">
+                            <option value="reg">Regular</option>
+                            <option value="pre">Premium</option>
+                        </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>Period</label>
+                </div>
+                <div class="col-sm-6">
+                    <input type="radio" name="period" id="onmn" value="1">
+                    <label for="onmn">1 Month</label>
+                    <input type="radio" name="period" id="trmn" value="3">
+                    <label for="onmn">3 Months</label>
+                    <input type="radio" name="period" id="onyr" value="12">
+                    <label for="onmn">1 Year</label>
+                </div>
+            </div>
+
+            </fieldset>
+            <br>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <input type="submit" value="SUBSCRIBE" class="bg-success" id="sbm"><br><br>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
